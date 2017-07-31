@@ -12,7 +12,7 @@
 node_modules/
 .tmp/
 .env
-
+.config
 
 # OS or Editor folders
 .DS_Store
