@@ -1,78 +1,83 @@
-@font-face {
- font-family: Alice;
- font-style: normal;
- font-weight: 400;
- src: local("Alice Regular"),local(Alice-Regular),url(//fonts.gstatic.com/s/alice/v8/sZyKh5NKrCk1xkCk_F1S8A.eot?#) format("eot"),url(//fonts.gstatic.com/s/alice/v8/l5RFQT5MQiajQkFxjDLySg.woff2) format("woff2"),url(//fonts.gstatic.com/s/alice/v8/_H4kMcdhHr0B8RDaQcqpTA.woff) format("woff");
+.temperature sup {
+        font-size: 48px;
+        font-size: 3rem;
 }
 
 @font-face {
- font-family: monospace;
- font-style: italic;
- font-weight: 400;
- src: local("Menlo Italic"),local(Menlo-Italic),local("Consolas Italic"),local(Consolas-Italic),local("Courier New Italic");
+        font-family: Alice;
+        font-style: normal;
+        font-weight: 400;
+        src: local("Alice Regular"),local(Alice-Regular),url(//fonts.gstatic.com/s/alice/v8/sZyKh5NKrCk1xkCk_F1S8A.eot?#) format("eot"),url(//fonts.gstatic.com/s/alice/v8/l5RFQT5MQiajQkFxjDLySg.woff2) format("woff2"),url(//fonts.gstatic.com/s/alice/v8/_H4kMcdhHr0B8RDaQcqpTA.woff) format("woff");
 }
 
 @font-face {
- font-family: monospace;
- font-style: italic;
- font-weight: 700;
- src: local("Menlo Bold Italic"),local(Menlo-BoldItalic),local(Monaco),local("Consolas Bold Italic"),local(Consolas-BoldItalic),local("Courier New Bold Italic");
+        font-family: monospace;
+        font-style: italic;
+        font-weight: 400;
+        src: local("Menlo Italic"),local(Menlo-Italic),local("Consolas Italic"),local(Consolas-Italic),local("Courier New Italic");
 }
 
 @font-face {
- font-family: monospace;
- font-style: normal;
- font-weight: 400;
- src: local("Menlo Regular"),local(Menlo-Regular),local(Monaco),local(Consolas),local("Courier New");
+        font-family: monospace;
+        font-style: italic;
+        font-weight: 700;
+        src: local("Menlo Bold Italic"),local(Menlo-BoldItalic),local(Monaco),local("Consolas Bold Italic"),local(Consolas-BoldItalic),local("Courier New Bold Italic");
 }
 
 @font-face {
- font-family: monospace;
- font-style: normal;
- font-weight: 700;
- src: local("Menlo Bold"),local(Menlo-Bold),local(Monaco),local("Consolas Bold"),local(Consolas-Bold),local("Courier New Bold");
+        font-family: monospace;
+        font-style: normal;
+        font-weight: 400;
+        src: local("Menlo Regular"),local(Menlo-Regular),local(Monaco),local(Consolas),local("Courier New");
 }
 
 @font-face {
- font-family: sans-serif;
- font-style: italic;
- font-weight: 300;
- src: local("Helvetica Neue Light Italic"),local(HelveticaNeue-LightItalic),local("Helvetica Light Oblique"),local(Helvetica-LightOblique);
+        font-family: monospace;
+        font-style: normal;
+        font-weight: 700;
+        src: local("Menlo Bold"),local(Menlo-Bold),local(Monaco),local("Consolas Bold"),local(Consolas-Bold),local("Courier New Bold");
 }
 
 @font-face {
- font-family: sans-serif;
- font-style: italic;
- font-weight: 400;
- src: local("Helvetica Neue Italic"),local(HelveticaNeue-Italic),local("Helvetica Oblique"),local(Helvetica-Oblique);
+        font-family: sans-serif;
+        font-style: italic;
+        font-weight: 300;
+        src: local("Helvetica Neue Light Italic"),local(HelveticaNeue-LightItalic),local("Helvetica Light Oblique"),local(Helvetica-LightOblique);
 }
 
 @font-face {
- font-family: sans-serif;
- font-style: italic;
- font-weight: 700;
- src: local("Helvetica Neue Bold Italic"),local(HelveticaNeue-BoldItalic),local("Helvetica Bold Oblique"),local(Helvetica-BoldOblique);
+        font-family: sans-serif;
+        font-style: italic;
+        font-weight: 400;
+        src: local("Helvetica Neue Italic"),local(HelveticaNeue-Italic),local("Helvetica Oblique"),local(Helvetica-Oblique);
 }
 
 @font-face {
- font-family: sans-serif;
- font-style: normal;
- font-weight: 300;
- src: local("Helvetica Neue Light"),local(HelveticaNeue-Light),local("Helvetica Light"),local(Helvetica-Light);
+        font-family: sans-serif;
+        font-style: italic;
+        font-weight: 700;
+        src: local("Helvetica Neue Bold Italic"),local(HelveticaNeue-BoldItalic),local("Helvetica Bold Oblique"),local(Helvetica-BoldOblique);
 }
 
 @font-face {
- font-family: sans-serif;
- font-style: normal;
- font-weight: 400;
- src: local(HelveticaNeue),local(Helvetica);
+        font-family: sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        src: local("Helvetica Neue Light"),local(HelveticaNeue-Light),local("Helvetica Light"),local(Helvetica-Light);
 }
 
 @font-face {
- font-family: sans-serif;
- font-style: normal;
- font-weight: 700;
- src: local("Helvetica Neue Bold"),local(HelveticaNeue-Bold),local("Helvetica Bold"),local(Helvetica-Bold);
+        font-family: sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        src: local(HelveticaNeue),local(Helvetica);
+}
+
+@font-face {
+        font-family: sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        src: local("Helvetica Neue Bold"),local(HelveticaNeue-Bold),local("Helvetica Bold"),local(Helvetica-Bold);
 }
 
 /*Variables*/
@@ -533,6 +538,8 @@ html {
     font-size: 1em;
     line-height: 1.4;
     overflow: hidden;
+    background: #879cca;
+    background: url('../assets/images/clear-daysky.jpg');
 }
 
 *,
@@ -626,16 +633,16 @@ textarea {
 
 @media screen and (min-width: 1280px) {
 
- .responsive {
-  font-size: 36px;
- }
+        .responsive {
+                font-size: 36px;
+        }
 }
 
 @media screen and (max-width: 420px) {
 
- .responsive {
-  font-size: 16px;
- }
+        .responsive {
+                font-size: 16px;
+        }
 }
 
 #icon {
@@ -701,80 +708,80 @@ we can specify global variable to use flexbox as default instead of floats
 
 @media (min-width: 576px) {
 
- .grid-one div {
+        .grid-one div {
 		width: calc(99.9% * 1/2 - (30px - 30px * 1/2));
- }
+        }
 
- .grid-one div:nth-child(1n) {
+        .grid-one div:nth-child(1n) {
 		float: left;
 		margin-right: 30px;
 		clear: none;
- }
+        }
 
- .grid-one div:last-child {
+        .grid-one div:last-child {
 		margin-right: 0;
- }
+        }
 
- .grid-one div:nth-child(2n) {
+        .grid-one div:nth-child(2n) {
 		margin-right: 0;
 		float: right;
- }
+        }
 
- .grid-one div:nth-child(2n + 1) {
+        .grid-one div:nth-child(2n + 1) {
 		clear: both;
- }
+        }
 	}
 
 @media (min-width: 768px) {
 
- .grid-one div {
+        .grid-one div {
 		width: calc(99.9% * 1/3 - (30px - 30px * 1/3));
- }
+        }
 
- .grid-one div:nth-child(1n) {
+        .grid-one div:nth-child(1n) {
 		float: left;
 		margin-right: 30px;
 		clear: none;
- }
+        }
 
- .grid-one div:last-child {
+        .grid-one div:last-child {
 		margin-right: 0;
- }
+        }
 
- .grid-one div:nth-child(3n) {
+        .grid-one div:nth-child(3n) {
 		margin-right: 0;
 		float: right;
- }
+        }
 
- .grid-one div:nth-child(3n + 1) {
+        .grid-one div:nth-child(3n + 1) {
 		clear: both;
- }
+        }
 	}
 
 @media (min-width: 992px) {
 
- .grid-one div {
+        .grid-one div {
 		width: calc(99.9% * 1/6 - (30px - 30px * 1/6));
- }
+        }
 
- .grid-one div:nth-child(1n) {
+        .grid-one div:nth-child(1n) {
 		float: left;
 		margin-right: 30px;
 		clear: none;
- }
+        }
 
- .grid-one div:last-child {
+        .grid-one div:last-child {
 		margin-right: 0;
- }
+        }
 
- .grid-one div:nth-child(6n) {
+        .grid-one div:nth-child(6n) {
 		margin-right: 0;
 		float: right;
- }
+        }
 
- .grid-one div:nth-child(6n + 1) {
+        .grid-one div:nth-child(6n + 1) {
 		clear: both;
- }
+        }
 	}
 
 .nested-grid {
@@ -923,86 +930,86 @@ we can specify global variable to use flexbox as default instead of floats
 
 @media (min-width: 576px) {
 
- .grid-three div {
+        .grid-three div {
 		width: calc(99.9% * 1/2 - (30px - 30px * 1/2));
- }
+        }
 
- .grid-three div:nth-child(1n) {
+        .grid-three div:nth-child(1n) {
 		float: left;
 		margin-right: 30px;
 		clear: none;
- }
+        }
 
- .grid-three div:last-child {
+        .grid-three div:last-child {
 		margin-right: 0;
- }
+        }
 
- .grid-three div:nth-child(2n) {
+        .grid-three div:nth-child(2n) {
 		margin-right: 0;
 		float: right;
- }
+        }
 
- .grid-three div:nth-child(2n + 1) {
+        .grid-three div:nth-child(2n + 1) {
 		clear: both;
- }
+        }
 	}
 
 @media (min-width: 768px) {
 
- .grid-three div {
+        .grid-three div {
 		width: calc(99.9% * 1/3 - (30px - 30px * 1/3));
- }
+        }
 
- .grid-three div:nth-child(1n) {
+        .grid-three div:nth-child(1n) {
 		float: left;
 		margin-right: 30px;
 		clear: none;
- }
+        }
 
- .grid-three div:last-child {
+        .grid-three div:last-child {
 		margin-right: 0;
- }
+        }
 
- .grid-three div:nth-child(3n) {
+        .grid-three div:nth-child(3n) {
 		margin-right: 0;
 		float: right;
- }
+        }
 
- .grid-three div:nth-child(3n + 1) {
+        .grid-three div:nth-child(3n + 1) {
 		clear: both;
- }
+        }
 	}
 
 @media (min-width: 992px) {
 
- .grid-three div {
+        .grid-three div {
 		width: calc(99.9% * 1/4 - (30px - 30px * 1/4));
 		height: calc(99.9% * 1/4 - (30px - 30px * 1/4));
- }
+        }
 
- .grid-three div:nth-child(1n) {
+        .grid-three div:nth-child(1n) {
 		float: left;
 		margin-right: 30px;
 		margin-bottom: 30px;
 		clear: none;
- }
+        }
 
- .grid-three div:last-child {
+        .grid-three div:last-child {
 		margin-right: 0;
 		margin-bottom: 0;
- }
+        }
 
- .grid-three div:nth-child(4n) {
+        .grid-three div:nth-child(4n) {
 		margin-right: 0;
- }
+        }
 
- .grid-three div:nth-child(4n + 1) {
+        .grid-three div:nth-child(4n + 1) {
 		clear: both;
- }
+        }
 
- .grid-three div:nth-last-child(-n + 4) {
+        .grid-three div:nth-last-child(-n + 4) {
 		margin-bottom: 0;
- }
+        }
 	}
 
 /*  Flexbox Grid  */
@@ -1053,79 +1060,79 @@ we can specify global variable to use flexbox as default instead of floats
 
 @media (min-width: 576px) {
 
- .grid-four div {
+        .grid-four div {
 		width: calc(99.9% * 1/2 - (30px - 30px * 1/2));
- }
+        }
 
- .grid-four div:nth-child(1n) {
+        .grid-four div:nth-child(1n) {
 		float: left;
 		margin-right: 30px;
 		clear: none;
- }
+        }
 
- .grid-four div:last-child {
+        .grid-four div:last-child {
 		margin-right: 0;
- }
+        }
 
- .grid-four div:nth-child(2n) {
+        .grid-four div:nth-child(2n) {
 		margin-right: 0;
 		float: right;
- }
+        }
 
- .grid-four div:nth-child(2n + 1) {
+        .grid-four div:nth-child(2n + 1) {
 		clear: both;
- }
+        }
 	}
 
 @media (min-width: 768px) {
 
- .grid-four div {
+        .grid-four div {
 		width: calc(99.9% * 1/3 - (30px - 30px * 1/3));
- }
+        }
 
- .grid-four div:nth-child(1n) {
+        .grid-four div:nth-child(1n) {
 		float: left;
 		margin-right: 30px;
 		clear: none;
- }
+        }
 
- .grid-four div:last-child {
+        .grid-four div:last-child {
 		margin-right: 0;
- }
+        }
 
- .grid-four div:nth-child(3n) {
+        .grid-four div:nth-child(3n) {
 		margin-right: 0;
 		float: right;
- }
+        }
 
- .grid-four div:nth-child(3n + 1) {
+        .grid-four div:nth-child(3n + 1) {
 		clear: both;
- }
+        }
 	}
 
 @media (min-width: 992px) {
 
- .grid-four div {
+        .grid-four div {
 		flex-grow: 0;
 		flex-shrink: 0;
 		flex-basis: calc(99.9% * 1/4 - (30px - 30px * 1/4));
 		max-width: calc(99.9% * 1/4 - (30px - 30px * 1/4));
 		width: calc(99.9% * 1/4 - (30px - 30px * 1/4));
- }
+        }
 
- .grid-four div:nth-child(1n) {
+        .grid-four div:nth-child(1n) {
 		margin-right: 30px;
 		margin-left: 0;
- }
+        }
 
- .grid-four div:last-child {
+        .grid-four div:last-child {
 		margin-right: 0;
- }
+        }
 
- .grid-four div:nth-child(4n) {
+        .grid-four div:nth-child(4n) {
 		margin-right: 0;
 		margin-left: auto;
- }
+        }
 	}
 
 /* html setup */
@@ -1200,6 +1207,44 @@ we can specify global variable to use flexbox as default instead of floats
         <div class="grid-item">12</div>
     </section>
     </div>*/
+
+.temperature {
+    margin: 0;
+    padding: 0;
+    text-align: center
+}
+
+.temperature .temp {
+        font-size: 120px;
+        font-size: 7.5rem;
+        width: 150px;
+        margin: 0 auto;
+}
+
+.unit {
+    font-size: 14.4px;
+    font-size: .9rem;
+    width: 100px;
+    margin: 0 auto;
+    text-align: center;
+    cursor: pointer
+}
+
+.unit p {
+        width: 100px;
+        margin: 0 auto;
+}
+
+.location{
+    text-align: center
+}
+
+.location .loc {
+        font-size: 24px;
+        font-size: 1.5rem;
+        width: 200px;
+        margin: 2% auto;
+}
 
 /* ==========================================================================
    Helper classes

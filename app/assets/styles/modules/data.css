@@ -1,0 +1,35 @@
+.temperature {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+    & .temp {
+        font-size: 7.5rem;
+        width: 150px;
+        margin: 0 auto;
+    }
+    & sup {
+        font-size: 3rem;
+    }
+}
+
+.unit {
+    font-size: .9rem;
+    width: 100px;
+    margin: 0 auto;
+    text-align: center;
+    cursor: pointer;
+    & p {
+        width: 100px;
+        margin: 0 auto;
+    }
+}
+.location{
+    text-align: center;
+
+    & .loc {
+        font-size: 1.5rem;
+        width: 200px;
+        margin: 2% auto;
+    }
+}

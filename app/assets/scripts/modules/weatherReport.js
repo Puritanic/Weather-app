@@ -20,7 +20,7 @@ function weatherAPI(latitude, longitude) {
         console.log(forecast.currently.icon);
         var skycons = new Skycons({"color": "#6a4f8b","resizeClear": true});
         var currentTemp = fToC(parseInt(forecast.currently.apparentTemperature));
-        $('.temperature').append('<p class="temp">' + currentTemp + '</p>');
+        $('.temperature').append('<p class="temp">' + currentTemp + '<sup>C</sup></p>');
         skycons.add(document.getElementById("icon"), forecast.currently.icon);
         // animate the icons
         skycons.play();
@@ -76,7 +76,8 @@ function getAddress(latitude, longitude) {
             if (request.readyState == 4) {
                 if (request.status == 200) {
                     var data = JSON.parse(request.responseText);
-                    var address = data.results[1].formatted_address;
+                    console.log(data);
+                    var address = data.results[2].formatted_address;
                     resolve(address);
                 } else {
                     reject(request.status);
@@ -85,7 +86,7 @@ function getAddress(latitude, longitude) {
         };
         request.send();
     }).then(function (address) {
-        $('.location').append('<p class="location">' + address + '</p>');
+        $('.location').append('<p class="loc">' + address + '</p>');
     });
 };
 
