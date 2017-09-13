@@ -76,18 +76,27 @@ var _weatherReport2 = _interopRequireDefault(_weatherReport);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+// Boolean for event handling, so that same events can be fired only once
+var eventState = true;
+
 _weatherReport2.default.weatherReport();
 
 $(document).on('click', '.frh', function () {
-    var tempVal = parseInt($('.temp').text());
-    var frhVal = _weatherReport2.default.cToF(tempVal);
-    $('.temp').html('<p class="temp">' + frhVal + '<sup class="cel activeUnit">C</sup><sub class="frh">F</sub></p>');
+    if (eventState === true) {
+        var tempVal = parseInt($('.temp').text());
+        var frhVal = _weatherReport2.default.cToF(tempVal);
+        $('.temp').html('<p class="temp">' + frhVal + '<sup class="cel">C</sup><sub class="activeUnit frh">F</sub></p>');
+        eventState = false;
+    }
 });
 
 $(document).on('click', '.cel', function () {
-    var tempVal = parseInt($('.temp').text());
-    var cVal = _weatherReport2.default.fToC(tempVal);
-    $('.temp').html('<p class="temp">' + cVal + '<sup class="cel activeUnit">C</sup><sub class="frh">F</sub></p>');
+    if (eventState === false) {
+        var tempVal = parseInt($('.temp').text());
+        var cVal = _weatherReport2.default.fToC(tempVal);
+        $('.temp').html('<p class="temp">' + cVal + '<sup class="cel activeUnit">C</sup><sub class="frh">F</sub></p>');
+        eventState = true;
+    }
 });
 
 /***/ }),
@@ -100,20 +109,20 @@ $(document).on('click', '.cel', function () {
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-// convert degrees to celsius
+// convert fahrenheit to celsius
 function fToC(fahrenheit) {
     var fTemp = fahrenheit,
         fToCel = (fTemp - 32) * 5 / 9;
     // rounding to nearest number after converting
     return Math.round(fToCel);
 }
-
+// convert celsius to fahrenheit
 function cToF(celsius) {
     var cTemp = parseFloat(celsius);
     var cToFh = cTemp * (9 / 5) + 32;
     return Math.round(cToFh);
 }
-
+// DarkSky API call
 function weatherAPI(latitude, longitude) {
     // variables config for coordinates, url and api key
     // latitude and longitude are accepted arguments and passed once a user has submitted the form.
@@ -164,6 +173,7 @@ function skycons() {
     icons.play();
 }
 
+// get User's current location(city, state)
 function getAddress(latitude, longitude) {
     return new Promise(function (resolve, reject) {
         var request = new XMLHttpRequest();
@@ -211,6 +221,7 @@ function weatherReport() {
     });
 };
 
+// Object for exporting
 var func = {
     weatherReport: weatherReport,
     cToF: cToF,

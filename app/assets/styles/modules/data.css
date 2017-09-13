@@ -42,3 +42,9 @@
         margin: 2% auto;
     }
 }
+
+.legal {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}

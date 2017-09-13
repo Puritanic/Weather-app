@@ -1,17 +1,17 @@
-// convert degrees to celsius
+// convert fahrenheit to celsius
 function fToC(fahrenheit) {
     var fTemp = fahrenheit,
         fToCel = (fTemp - 32) * 5 / 9;
     // rounding to nearest number after converting
     return Math.round(fToCel);
 }
-
+// convert celsius to fahrenheit
 function cToF(celsius) {
     var cTemp = parseFloat(celsius);
     var cToFh = (cTemp * (9/5)) + 32;
     return Math.round(cToFh);
 }
-
+// DarkSky API call
 function weatherAPI(latitude, longitude) {
     // variables config for coordinates, url and api key
     // latitude and longitude are accepted arguments and passed once a user has submitted the form.
@@ -71,6 +71,7 @@ function skycons() {
     icons.play();
 }
 
+// get User's current location(city, state)
 function getAddress(latitude, longitude) {
     return new Promise(function (resolve, reject) {
         var request = new XMLHttpRequest();
@@ -119,6 +120,7 @@ function weatherReport() {
     });
 };
 
+// Object for exporting
 const func = {
     weatherReport, 
     cToF, 
