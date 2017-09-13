@@ -76,7 +76,19 @@ var _weatherReport2 = _interopRequireDefault(_weatherReport);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-(0, _weatherReport2.default)();
+_weatherReport2.default.weatherReport();
+
+$(document).on('click', '.frh', function () {
+    var tempVal = parseInt($('.temp').text());
+    var frhVal = _weatherReport2.default.cToF(tempVal);
+    $('.temp').html('<p class="temp">' + frhVal + '<sup class="cel activeUnit">C</sup><sub class="frh">F</sub></p>');
+});
+
+$(document).on('click', '.cel', function () {
+    var tempVal = parseInt($('.temp').text());
+    var cVal = _weatherReport2.default.fToC(tempVal);
+    $('.temp').html('<p class="temp">' + cVal + '<sup class="cel activeUnit">C</sup><sub class="frh">F</sub></p>');
+});
 
 /***/ }),
 /* 1 */
@@ -116,12 +128,12 @@ function weatherAPI(latitude, longitude) {
         console.log(forecast.currently.icon);
         var skycons = new Skycons({ "color": "#272527", "resizeClear": true });
         var currentCTemp = fToC(parseInt(forecast.currently.apparentTemperature));
-        $('.temperature').append('<p class="temp">' + currentCTemp + '<sup>C</sup><sub>F</sub></p>');
+        $('.temperature').append('<p class="temp">' + currentCTemp + '<sup class="cel activeUnit">C</sup><sub class="frh">F</sub></p>');
         skycons.add(document.getElementById("icon"), forecast.currently.icon);
         // animate the icons
         skycons.play();
 
-        return currentTemp;
+        return currentCTemp;
     });
 }
 
@@ -199,7 +211,12 @@ function weatherReport() {
     });
 };
 
-exports.default = weatherReport;
+var func = {
+    weatherReport: weatherReport,
+    cToF: cToF,
+    fToC: fToC
+};
+exports.default = func;
 
 /***/ })
 /******/ ]);

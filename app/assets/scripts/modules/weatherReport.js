@@ -26,12 +26,12 @@ function weatherAPI(latitude, longitude) {
         console.log(forecast.currently.icon);
         var skycons = new Skycons({"color": "#272527","resizeClear": true});
         var currentCTemp = fToC(parseInt(forecast.currently.apparentTemperature));
-        $('.temperature').append('<p class="temp">' + currentCTemp + '<sup>C</sup><sub>F</sub></p>');
+        $('.temperature').append('<p class="temp">' + currentCTemp + '<sup class="cel activeUnit">C</sup><sub class="frh">F</sub></p>');
         skycons.add(document.getElementById("icon"), forecast.currently.icon);
         // animate the icons
         skycons.play();
 
-        return currentTemp;
+        return currentCTemp;
     });
 }
 
@@ -119,4 +119,9 @@ function weatherReport() {
     });
 };
 
-export default weatherReport;
+const func = {
+    weatherReport, 
+    cToF, 
+    fToC
+}
+export default func;
