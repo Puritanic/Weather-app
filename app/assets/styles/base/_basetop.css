@@ -13,12 +13,19 @@
    ========================================================================== */
 
 html {
-    color: #222;
+    color: #EEE8D6;
     font-size: 1em;
     line-height: 1.4;
     overflow: hidden;
-    background: #879cca;
-    background: url('../../assets/images/clear-daysky.jpg');
+    background: #626062 inline('./assets/images/clear-daysky.jpg') no-repeat;
+    background-position: -50px 50%;
+    width: 100%;
+    height: 100%;
+
+    @media(--viewport-medium){
+        background-position: 0% 0%;
+        background-size: cover;
+    }
 }
 
 *,

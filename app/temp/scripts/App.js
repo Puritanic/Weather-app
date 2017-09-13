@@ -96,6 +96,12 @@ function fToC(fahrenheit) {
     return Math.round(fToCel);
 }
 
+function cToF(celsius) {
+    var cTemp = parseFloat(celsius);
+    var cToFh = cTemp * (9 / 5) + 32;
+    return Math.round(cToFh);
+}
+
 function weatherAPI(latitude, longitude) {
     // variables config for coordinates, url and api key
     // latitude and longitude are accepted arguments and passed once a user has submitted the form.
@@ -108,12 +114,13 @@ function weatherAPI(latitude, longitude) {
     return $.getJSON(api_call, function (forecast) {
         console.log(forecast);
         console.log(forecast.currently.icon);
-        var skycons = new Skycons({ "color": "#6a4f8b", "resizeClear": true });
-        var currentTemp = fToC(parseInt(forecast.currently.apparentTemperature));
-        $('.temperature').append('<p class="temp">' + currentTemp + '<sup>C</sup></p>');
+        var skycons = new Skycons({ "color": "#272527", "resizeClear": true });
+        var currentCTemp = fToC(parseInt(forecast.currently.apparentTemperature));
+        $('.temperature').append('<p class="temp">' + currentCTemp + '<sup>C</sup><sub>F</sub></p>');
         skycons.add(document.getElementById("icon"), forecast.currently.icon);
         // animate the icons
         skycons.play();
+
         return currentTemp;
     });
 }

@@ -1,7 +1,11 @@
 .temperature {
+    background: color(black alpha(45%));
+    width: 60%;
     margin: 0;
     padding: 0;
     text-align: center;
+    position: relative;
+    margin: 0 auto;
 
     & .temp {
         font-size: 7.5rem;
@@ -9,24 +13,23 @@
         margin: 0 auto;
     }
     & sup {
+        position: relative;
+        top: -45px;
         font-size: 3rem;
     }
-}
-
-.unit {
-    font-size: .9rem;
-    width: 100px;
-    margin: 0 auto;
-    text-align: center;
-    cursor: pointer;
-    & p {
-        width: 100px;
-        margin: 0 auto;
+    & sub {
+        position: relative;
+        right: 25px;
+        font-size: 2.5rem;
     }
 }
+
 .location{
     text-align: center;
-
+    background: color(black alpha(45%));
+    width: 60%;
+    // border-radius: 10%;
+    margin: 0 auto;
     & .loc {
         font-size: 1.5rem;
         width: 200px;
