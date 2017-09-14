@@ -1,28 +1,53 @@
 .temperature {
     background: color(black alpha(45%));
-    width: 60%;
+    width: 70%;
     margin: 0;
     padding: 0;
     text-align: center;
     position: relative;
-    margin: 0 auto;
+    margin: 25px auto 0 auto;
+
+    @media(--viewport-medium){
+        width: 25%;
+        margin-top: 3%;
+        padding: 2% 0;
+    }
 
     & .temp {
         font-size: 7.5rem;
-        width: 150px;
+        width: 250px;
         margin: 0 auto;
+
+        @media(--viewport-medium){
+            font-size: 9.5rem;
+            width: 100%;
+        }
+    }
+    & sup, sub {
+        vertical-align: baseline;
+        position: relative;
+        top: -0.4em;
     }
     & sup {
-        position: relative;
-        top: -45px;
         font-size: 3rem;
         cursor: pointer;
+        line-height: 0;
+        left: 40px;
+
+        @media(--viewport-medium){
+            font-size: 4.5rem;
+            left: 60px;
+        }
     }
     & sub {
-        position: relative;
-        right: 25px;
         font-size: 2.5rem;
         cursor: pointer;
+        line-height: 0;
+        top: 0.4em;
+        
+        @media(--viewport-medium){
+            font-size: 3.5rem;
+        }
     }
 }
 
@@ -33,13 +58,23 @@
 .location{
     text-align: center;
     background: color(black alpha(45%));
-    width: 60%;
-    // border-radius: 10%;
+    width: 70%;
     margin: 0 auto;
+
+    @media(--viewport-medium){
+        width: 25%;
+        margin-top: 3%;
+        padding: 2% 0;
+    }
     & .loc {
         font-size: 1.5rem;
         width: 200px;
         margin: 2% auto;
+
+        @media(--viewport-medium){
+            width: 60%;
+            font-size: 2rem;
+        }
     }
 }
 
@@ -47,4 +82,7 @@
     position: absolute;
     bottom: 20px;
     right: 20px;
+    & a {
+        color: #414349;
+    }
 }

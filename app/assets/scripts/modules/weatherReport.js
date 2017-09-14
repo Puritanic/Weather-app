@@ -22,21 +22,19 @@ function weatherAPI(latitude, longitude) {
         api_call = url + apiKey + "/" + lat + "," + lng + "?extend=hourly&callback=?";
 
     return $.getJSON(api_call, function (forecast) {
-        console.log(forecast);
-        console.log(forecast.currently.icon);
-        var skycons = new Skycons({
-            "color": "#272527",
-            "resizeClear": true
-        });
+        var skycons;
+
         var currentCTemp = fToC(parseInt(forecast.currently.apparentTemperature));
-        $('.temperature').append('<p class="temp">' + currentCTemp + '<sup class="cel activeUnit">C</sup><sub class="frh">F</sub></p>');
-        skycons.add(document.getElementById("icon"), forecast.currently.icon);
-        // animate the icons
-        skycons.play();
-        // $(document.body).addClass(newClass);
+        $('.temperature').append('<p class="temp">' + currentCTemp + '<sup class="cel activeUnit">&#8451;</sup><sub class="frh">&#8457;</sub></p>');
+        // skycons.add(document.getElementById("icon"), forecast.currently.icon);
         switch (forecast.currently.icon) {
             case "clear-day":
                 $(document.body).addClass('clearDaySky');
+                skycons = new Skycons({
+                    "color": "#fcde2b",
+                    "resizeClear": true
+                });
+                skycons.add(document.getElementById("icon"), forecast.currently.icon);
                 break;
             case "clear-night":
                 $(document.body).addClass('clearNightSky');
@@ -66,44 +64,10 @@ function weatherAPI(latitude, longitude) {
                 $(document.body).addClass('fog');
                 break;
         }
+        // animate the icons
+        skycons.play();
         return currentCTemp;
     });
-}
-
-function skycons() {
-    var i,
-        icons = new Skycons({
-            "color": "#FFFFFF",
-            "resizeClear": true // nasty android hack
-        }),
-        list = [ // listing of all possible icons
-            "clear-day",
-            "clear-night",
-            "partly-cloudy-day",
-            "partly-cloudy-night",
-            "cloudy",
-            "rain",
-            "sleet",
-            "snow",
-            "wind",
-            "fog"
-        ];
-
-    // loop thru icon list array
-    for (i = list.length; i--;) {
-        var weatherType = list[i], // select each icon from list array
-            // icons will have the name in the array above attached to the 
-            // canvas element as a class so let's hook into them.
-            elements = document.getElementsByClassName(weatherType);
-
-        // loop thru the elements now and set them up
-        for (e = elements.length; e--;) {
-            icons.set(elements[e], weatherType);
-        }
-    }
-
-    // animate the icons
-    icons.play();
 }
 
 // get User's current location(city, state)
