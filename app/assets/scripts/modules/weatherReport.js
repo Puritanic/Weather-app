@@ -8,7 +8,7 @@ function fToC(fahrenheit) {
 // convert celsius to fahrenheit
 function cToF(celsius) {
     var cTemp = parseFloat(celsius);
-    var cToFh = (cTemp * (9/5)) + 32;
+    var cToFh = (cTemp * (9 / 5)) + 32;
     return Math.round(cToFh);
 }
 // DarkSky API call
@@ -24,13 +24,48 @@ function weatherAPI(latitude, longitude) {
     return $.getJSON(api_call, function (forecast) {
         console.log(forecast);
         console.log(forecast.currently.icon);
-        var skycons = new Skycons({"color": "#272527","resizeClear": true});
+        var skycons = new Skycons({
+            "color": "#272527",
+            "resizeClear": true
+        });
         var currentCTemp = fToC(parseInt(forecast.currently.apparentTemperature));
         $('.temperature').append('<p class="temp">' + currentCTemp + '<sup class="cel activeUnit">C</sup><sub class="frh">F</sub></p>');
         skycons.add(document.getElementById("icon"), forecast.currently.icon);
         // animate the icons
         skycons.play();
-
+        // $(document.body).addClass(newClass);
+        switch (forecast.currently.icon) {
+            case "clear-day":
+                $(document.body).addClass('clearDaySky');
+                break;
+            case "clear-night":
+                $(document.body).addClass('clearNightSky');
+                break;
+            case "partly-cloudy-day":
+                $(document.body).addClass('partlyCloudyDay');
+                break;
+            case "partly-cloudy-night":
+                $(document.body).addClass('partlyCloudyNight');
+                break;
+            case "cloudy":
+                $(document.body).addClass('cloudy');
+                break;
+            case "rain":
+                $(document.body).addClass('rain');
+                break;
+            case "sleet":
+                $(document.body).addClass('sleet');
+                break;
+            case "snow":
+                $(document.body).addClass('snow');
+                break;
+            case "wind":
+                $(document.body).addClass('wind');
+                break;
+            case "fog":
+                $(document.body).addClass('fog');
+                break;
+        }
         return currentCTemp;
     });
 }
@@ -38,10 +73,10 @@ function weatherAPI(latitude, longitude) {
 function skycons() {
     var i,
         icons = new Skycons({
-            "color" : "#FFFFFF",
+            "color": "#FFFFFF",
             "resizeClear": true // nasty android hack
         }),
-        list  = [ // listing of all possible icons
+        list = [ // listing of all possible icons
             "clear-day",
             "clear-night",
             "partly-cloudy-day",
@@ -55,18 +90,18 @@ function skycons() {
         ];
 
     // loop thru icon list array
-    for(i = list.length; i--;) {
+    for (i = list.length; i--;) {
         var weatherType = list[i], // select each icon from list array
-                // icons will have the name in the array above attached to the 
-                // canvas element as a class so let's hook into them.
-                elements    = document.getElementsByClassName( weatherType );
+            // icons will have the name in the array above attached to the 
+            // canvas element as a class so let's hook into them.
+            elements = document.getElementsByClassName(weatherType);
 
         // loop thru the elements now and set them up
         for (e = elements.length; e--;) {
             icons.set(elements[e], weatherType);
         }
     }
-    
+
     // animate the icons
     icons.play();
 }
@@ -122,8 +157,8 @@ function weatherReport() {
 
 // Object for exporting
 const func = {
-    weatherReport, 
-    cToF, 
+    weatherReport,
+    cToF,
     fToC
 }
 export default func;

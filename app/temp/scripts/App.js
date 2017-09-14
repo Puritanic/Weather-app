@@ -81,6 +81,7 @@ var eventState = true;
 
 _weatherReport2.default.weatherReport();
 
+// dynamic event listeners
 $(document).on('click', '.frh', function () {
     if (eventState === true) {
         var tempVal = parseInt($('.temp').text());
@@ -135,13 +136,48 @@ function weatherAPI(latitude, longitude) {
     return $.getJSON(api_call, function (forecast) {
         console.log(forecast);
         console.log(forecast.currently.icon);
-        var skycons = new Skycons({ "color": "#272527", "resizeClear": true });
+        var skycons = new Skycons({
+            "color": "#272527",
+            "resizeClear": true
+        });
         var currentCTemp = fToC(parseInt(forecast.currently.apparentTemperature));
         $('.temperature').append('<p class="temp">' + currentCTemp + '<sup class="cel activeUnit">C</sup><sub class="frh">F</sub></p>');
         skycons.add(document.getElementById("icon"), forecast.currently.icon);
         // animate the icons
         skycons.play();
-
+        // $(document.body).addClass(newClass);
+        switch (forecast.currently.icon) {
+            case "clear-day":
+                $(document.body).addClass('clearDaySky');
+                break;
+            case "clear-night":
+                $(document.body).addClass('clearNightSky');
+                break;
+            case "partly-cloudy-day":
+                $(document.body).addClass('partlyCloudyDay');
+                break;
+            case "partly-cloudy-night":
+                $(document.body).addClass('partlyCloudyNight');
+                break;
+            case "cloudy":
+                $(document.body).addClass('cloudy');
+                break;
+            case "rain":
+                $(document.body).addClass('rain');
+                break;
+            case "sleet":
+                $(document.body).addClass('sleet');
+                break;
+            case "snow":
+                $(document.body).addClass('snow');
+                break;
+            case "wind":
+                $(document.body).addClass('wind');
+                break;
+            case "fog":
+                $(document.body).addClass('fog');
+                break;
+        }
         return currentCTemp;
     });
 }

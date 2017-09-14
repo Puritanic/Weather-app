@@ -1,0 +1,100 @@
+
+.clearDaySky {
+    background: #626062 inline('./assets/images/clear-daysky.jpg') no-repeat;
+    background-position: -50px 50%;
+
+    @media(--viewport-medium){
+        background-position: 0% 0%;
+        background-size: cover;
+    }
+}
+
+.clearNightSky {
+    background: #626062 inline('./assets/images/clear-nightskyM.jpg') no-repeat;
+    background-position: -50px 50%;
+
+    @media(--viewport-medium){
+        background-position: 0% 0%;
+        background-size: cover;
+    }
+}
+
+.partlyCloudyDay {
+    background: #626062 inline('./assets/images/cloudyDay1.jpg') no-repeat;
+    background-position: -50px 50%;
+
+    @media(--viewport-medium){
+        background-position: 0% 0%;
+        background-size: cover;
+    }
+}
+
+.partlyCloudyNight {
+    background: #626062 inline('./assets/images/cloudyNight.jpg') no-repeat;
+    background-position: -50px 50%;
+
+    @media(--viewport-medium){
+        background-position: 0% 0%;
+        background-size: cover;
+    }
+}
+
+.cloudy {
+    background: #626062 inline('./assets/images/cloudy.jpg') no-repeat;
+    background-position: -50px 50%;
+
+    @media(--viewport-medium){
+        background-position: 0% 0%;
+        background-size: cover;
+    }
+}
+
+.rain {
+    background: #626062 inline('./assets/images/rain.jpg') no-repeat;
+    background-position: -50px 50%;
+
+    @media(--viewport-medium){
+        background-position: 0% 0%;
+        background-size: cover;
+    }
+}
+
+.sleet {
+    background: #626062 inline('./assets/images/sleet.jpg') no-repeat;
+    background-position: -50px 50%;
+
+    @media(--viewport-medium){
+        background-position: 0% 0%;
+        background-size: cover;
+    }
+}
+
+.snow {
+    background: #626062 inline('./assets/images/snow.jpg') no-repeat;
+    background-position: -50px 50%;
+
+    @media(--viewport-medium){
+        background-position: 0% 0%;
+        background-size: cover;
+    }
+}
+
+.wind {
+    background: #626062 inline('./assets/images/wind.jpg') no-repeat;
+    background-position: -50px 50%;
+
+    @media(--viewport-medium){
+        background-position: 0% 0%;
+        background-size: cover;
+    }
+}
+
+.fog {
+    background: #626062 inline('./assets/images/fog.jpg') no-repeat;
+    background-position: -50px 50%;
+
+    @media(--viewport-medium){
+        background-position: 0% 0%;
+        background-size: cover;
+    }
+}

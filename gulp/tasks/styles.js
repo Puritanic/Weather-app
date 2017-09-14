@@ -27,8 +27,7 @@ gulp.task('styles', function(){
 		.pipe(postcss([
 			require('postcss-partial-import')({prefix: '_', extension: '.css'}),
 			require('postcss-assets')({
-				loadPaths: ['**'],
-				relative: true
+				basePath: 'app'
 				}),
 				require("postcss-url")(),
 					fontMagician(),	// https://github.com/jonathantneal/postcss-font-magician	 		

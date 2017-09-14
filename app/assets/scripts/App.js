@@ -5,6 +5,7 @@ var eventState = true;
 
 func.weatherReport();
 
+// dynamic event listeners
 $(document).on('click', '.frh', function() { 
     if(eventState === true){
         var tempVal = parseInt($('.temp').text());
