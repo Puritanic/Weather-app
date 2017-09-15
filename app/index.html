@@ -1,29 +1,21 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="en-us">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Weather Now</title>
-    <meta name="description" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-     Reiciendis quaerat iusto dignissimos rem, repudiandae quia placeat omnis blanditiis nemo velit praesentium hic,
-     culpa molestias in accusantium commodi, numquam excepturi soluta.">
+    <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="apple-touch-icon" href="./assets/images/icons/apple-touch-icon.png">
-    <!-- Place favicon.ico in the root directory -->
     <!-- build:css assets/styles/main.css  -->
     <link rel="stylesheet" type="text/css" href="temp/styles/main.css">
     <!-- endbuild -->
     <!-- build:js assets/scripts/Vendor.js -->
     <script type="text/javascript" src="./temp/scripts/Vendor.js"></script>
     <!-- endbuild -->
-    <script type="text/javascript" src="https://gitcdn.link/cdn/darkskyapp/skycons/master/skycons.js"></script>
 </head>
 
 <body>
-    <!--[if lt IE 8]>  
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
     <canvas id="icon" width="225" height="225"></canvas>
     <div class="temperature">
 
@@ -35,14 +27,13 @@
         <small>Powered by <a href="https://darksky.net/forecast/44,21/si24/en">DarkSky API</a></small>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-        crossorigin="anonymous"></script>
+
+
+    <script type="text/javascript" src="https://gitcdn.link/cdn/darkskyapp/skycons/master/skycons.js"></script>    
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
     <script>
-        window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')
+        window.jQuery || document.write('<script src="assets/scripts/jquery-3.2.1.min.js"><\/script>')
     </script>
-    <!-- build:js assets/scripts/plugins.js -->
-    <script src="./assets/scripts/plugins.js"></script>
-    <!-- endbuild -->
     <!-- build:js assets/scripts/App.js -->
     <script type="text/javascript" src="./temp/scripts/App.js"></script>
     <!-- endbuild -->
