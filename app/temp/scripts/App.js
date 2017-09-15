@@ -138,7 +138,7 @@ function weatherAPI(latitude, longitude) {
 
         var currentCTemp = fToC(parseInt(forecast.currently.apparentTemperature));
         $('.temperature').append('<p class="temp">' + currentCTemp + '<sup class="cel activeUnit">&#8451;</sup><sub class="frh">&#8457;</sub></p>');
-        // skycons.add(document.getElementById("icon"), forecast.currently.icon);
+        // Switch statement for adding background and skycons to the page
         switch (forecast.currently.icon) {
             case "clear-day":
                 $(document.body).addClass('clearDaySky');
@@ -150,30 +150,75 @@ function weatherAPI(latitude, longitude) {
                 break;
             case "clear-night":
                 $(document.body).addClass('clearNightSky');
+                skycons = new Skycons({
+                    "color": "#cccacc",
+                    "resizeClear": true
+                });
+                skycons.add(document.getElementById("icon"), forecast.currently.icon);
                 break;
             case "partly-cloudy-day":
                 $(document.body).addClass('partlyCloudyDay');
+                skycons = new Skycons({
+                    "color": "#384952",
+                    "resizeClear": true
+                });
+                skycons.add(document.getElementById("icon"), forecast.currently.icon);
                 break;
             case "partly-cloudy-night":
                 $(document.body).addClass('partlyCloudyNight');
+                skycons = new Skycons({
+                    "color": "#384952",
+                    "resizeClear": true
+                });
+                skycons.add(document.getElementById("icon"), forecast.currently.icon);
                 break;
             case "cloudy":
                 $(document.body).addClass('cloudy');
+                skycons = new Skycons({
+                    "color": "#384952",
+                    "resizeClear": true
+                });
+                skycons.add(document.getElementById("icon"), forecast.currently.icon);
                 break;
             case "rain":
                 $(document.body).addClass('rain');
+                skycons = new Skycons({
+                    "color": "#384952",
+                    "resizeClear": true
+                });
+                skycons.add(document.getElementById("icon"), forecast.currently.icon);
                 break;
             case "sleet":
                 $(document.body).addClass('sleet');
+                skycons = new Skycons({
+                    "color": "#384952",
+                    "resizeClear": true
+                });
+                skycons.add(document.getElementById("icon"), forecast.currently.icon);
                 break;
             case "snow":
                 $(document.body).addClass('snow');
+                skycons = new Skycons({
+                    "color": "#384952",
+                    "resizeClear": true
+                });
+                skycons.add(document.getElementById("icon"), forecast.currently.icon);
                 break;
             case "wind":
                 $(document.body).addClass('wind');
+                skycons = new Skycons({
+                    "color": "#384952",
+                    "resizeClear": true
+                });
+                skycons.add(document.getElementById("icon"), forecast.currently.icon);
                 break;
             case "fog":
                 $(document.body).addClass('fog');
+                skycons = new Skycons({
+                    "color": "#384952",
+                    "resizeClear": true
+                });
+                skycons.add(document.getElementById("icon"), forecast.currently.icon);
                 break;
         }
         // animate the icons
