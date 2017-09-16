@@ -14,7 +14,7 @@
 
 html , body{
     color: #EEE8D6;
-    background: inline('./assets/images/naturalblack.png');
+    background: resolve('naturalblack.png');
     font-size: 1em;
     line-height: 1.4;
     overflow: hidden;

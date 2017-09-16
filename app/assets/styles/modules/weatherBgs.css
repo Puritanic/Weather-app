@@ -1,6 +1,6 @@
 
 .clearDaySky {
-    background: #626062 inline('./assets/images/clear-daysky.jpg') no-repeat;
+    background: #626062 resolve('clear-daysky.jpg') no-repeat;
     background-position: -50px 50%;
 
     @media(--viewport-medium){
@@ -10,7 +10,7 @@
 }
 
 .clearNightSky {
-    background: #626062 inline('./assets/images/clear-nightskyM.jpg') no-repeat;
+    background: #626062 resolve('clear-nightskyM.jpg') no-repeat;
     background-position: -50px 50%;
 
     @media(--viewport-medium){
@@ -20,7 +20,7 @@
 }
 
 .partlyCloudyDay {
-    background: #626062 inline('./assets/images/cloudyDay1.jpg') no-repeat;
+    background: #626062 resolve('cloudyDay1.jpg') no-repeat;
     background-position: -50px 50%;
 
     @media(--viewport-medium){
@@ -30,7 +30,7 @@
 }
 
 .partlyCloudyNight {
-    background: #626062 inline('./assets/images/cloudyNight.jpg') no-repeat;
+    background: #626062 resolve('cloudyNight.jpg') no-repeat;
     background-position: -50px 50%;
 
     @media(--viewport-medium){
@@ -40,7 +40,7 @@
 }
 
 .cloudy {
-    background: #626062 inline('./assets/images/cloudy.jpg') no-repeat;
+    background: #626062 resolve('cloudy.jpg') no-repeat;
     background-position: -50px 50%;
 
     @media(--viewport-medium){
@@ -50,7 +50,7 @@
 }
 
 .rain {
-    background: #626062 inline('./assets/images/rain.jpg') no-repeat;
+    background: #626062 resolve('rain.jpg') no-repeat;
     background-position: -50px 50%;
 
     @media(--viewport-medium){
@@ -60,7 +60,7 @@
 }
 
 .sleet {
-    background: #626062 inline('./assets/images/sleet.jpg') no-repeat;
+    background: #626062 resolve('sleet.jpg') no-repeat;
     background-position: -50px 50%;
 
     @media(--viewport-medium){
@@ -70,7 +70,7 @@
 }
 
 .snow {
-    background: #626062 inline('./assets/images/snow.jpg') no-repeat;
+    background: #626062 resolve('snow.jpg') no-repeat;
     background-position: -50px 50%;
 
     @media(--viewport-medium){
@@ -80,7 +80,7 @@
 }
 
 .wind {
-    background: #626062 inline('./assets/images/wind.jpg') no-repeat;
+    background: #626062 resolve('wind.jpg') no-repeat;
     background-position: -50px 50%;
 
     @media(--viewport-medium){
@@ -90,7 +90,7 @@
 }
 
 .fog {
-    background: #626062 inline('./assets/images/fog.jpg') no-repeat;
+    background: #626062 resolve('fog.jpg') no-repeat;
     background-position: -50px 50%;
 
     @media(--viewport-medium){
