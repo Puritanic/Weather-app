@@ -561,7 +561,7 @@ body {
 
 html , body{
     color: #EEE8D6;
-    background: url('/assets/images/naturalblack.png');
+    background: url('images/naturalblack.png');
     font-size: 1em;
     line-height: 1.4;
     overflow: hidden;
@@ -774,7 +774,7 @@ textarea {
 }
 
 .clearDaySky {
-    background: #626062 url('/assets/images/clear-daysky.jpg') no-repeat;
+    background: #626062 url('images/clear-daysky.jpg') no-repeat;
     background-position: -50px 50%
 }
 
@@ -787,7 +787,7 @@ textarea {
     }
 
 .clearNightSky {
-    background: #626062 url('/assets/images/clear-nightskyM.jpg') no-repeat;
+    background: #626062 url('images/clear-nightskyM.jpg') no-repeat;
     background-position: -50px 50%
 }
 
@@ -800,7 +800,7 @@ textarea {
     }
 
 .partlyCloudyDay {
-    background: #626062 url('/assets/images/cloudyDay1.jpg') no-repeat;
+    background: #626062 url('images/cloudyDay1.jpg') no-repeat;
     background-position: -50px 50%
 }
 
@@ -813,7 +813,7 @@ textarea {
     }
 
 .partlyCloudyNight {
-    background: #626062 url('/assets/images/cloudyNight.jpg') no-repeat;
+    background: #626062 url('images/cloudyNight.jpg') no-repeat;
     background-position: -50px 50%
 }
 
@@ -826,7 +826,7 @@ textarea {
     }
 
 .cloudy {
-    background: #626062 url('/assets/images/cloudy.jpg') no-repeat;
+    background: #626062 url('images/cloudy.jpg') no-repeat;
     background-position: -50px 50%
 }
 
@@ -839,7 +839,7 @@ textarea {
     }
 
 .rain {
-    background: #626062 url('/assets/images/rain.jpg') no-repeat;
+    background: #626062 url('images/rain.jpg') no-repeat;
     background-position: -50px 50%
 }
 
@@ -852,7 +852,7 @@ textarea {
     }
 
 .sleet {
-    background: #626062 url('/assets/images/sleet.jpg') no-repeat;
+    background: #626062 url('images/sleet.jpg') no-repeat;
     background-position: -50px 50%
 }
 
@@ -865,7 +865,7 @@ textarea {
     }
 
 .snow {
-    background: #626062 url('/assets/images/snow.jpg') no-repeat;
+    background: #626062 url('images/snow.jpg') no-repeat;
     background-position: -50px 50%
 }
 
@@ -878,7 +878,7 @@ textarea {
     }
 
 .wind {
-    background: #626062 url('/assets/images/wind.jpg') no-repeat;
+    background: #626062 url('images/wind.jpg') no-repeat;
     background-position: -50px 50%
 }
 
@@ -891,7 +891,7 @@ textarea {
     }
 
 .fog {
-    background: #626062 url('/assets/images/fog.jpg') no-repeat;
+    background: #626062 url('images/fog.jpg') no-repeat;
     background-position: -50px 50%
 }
 
